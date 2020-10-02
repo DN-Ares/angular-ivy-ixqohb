@@ -2,7 +2,7 @@
 <button (click)="startSearch()" >Search!</button>
 <div *ngIf="searchResult">
   <h2> {{ searchResult.title }}</h2>
- <a href="searchResult"> </a>
+ <a [href]="searchResult.content_urls.desktop.page">{{searchResult.description}}</a>
 
  <img [src] ="searchImage" /> 
  <!-- 
