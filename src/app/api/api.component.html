@@ -1,7 +1,7 @@
 <input #search />
 <button (click)="startSearch()" >Search!</button>
 <div *ngIf="searchResult">
-  <h2> {{searchResult.title}}</h2>
-  <p> {{searchResult.extract}}</p>
-  <p> {{searchResult.timestamp}}</p>
+  <h2> {{ searchResult.title }}</h2>
+  <p> {{ searchResult.extract }}</p>
+  <p> {{ searchResult.timestamp | date }}</p>
 </div> 
