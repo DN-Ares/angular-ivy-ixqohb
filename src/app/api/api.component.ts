@@ -25,7 +25,7 @@ searchImage:string;
     this.http.get(this.apiUrl + searchTerm ).subscribe((res)=> {
       console.log(res);
       this.searchResult = res;
-      this.searchImage = this.searchResult.thumbnail.source
+      this.searchImage = this.searchResult.thumbnail ? this.searchResult.thumbnail.source : undefined;
     })
   }
 }
