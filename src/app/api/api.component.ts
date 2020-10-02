@@ -10,6 +10,8 @@ export class ApiComponent implements OnInit {
 
   apiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 searchResult:any;
+searchImage:string;
+
 
   @ViewChild('search') searchBox: ElementRef<HTMLInputElement>;
 
@@ -23,6 +25,7 @@ searchResult:any;
     this.http.get(this.apiUrl + searchTerm ).subscribe((res)=> {
       console.log(res);
       this.searchResult = res;
+      this.searchImage = this.searchResult.thumbnail.source
     })
   }
 }
