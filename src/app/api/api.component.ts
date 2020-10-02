@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiComponent implements OnInit {
 
   apiUrl = 'https://et.wikipedia.org/api/rest_v1/page/summary/';
+searchApi = '';
 searchResult:any;
 searchImage:string;
 
