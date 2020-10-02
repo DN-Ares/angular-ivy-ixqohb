@@ -20,8 +20,8 @@ searchImage:string;
 
   ngOnInit() { }
 
-  startSearch () {
-    const searchTerm = this.searchBox.nativeElement.value;
+  get Overview () {
+    
     
 
     this.http.get(this.apiUrl + searchTerm ).subscribe((res)=> {
@@ -29,5 +29,13 @@ searchImage:string;
       this.searchResult = res;
       this.searchImage = this.searchResult.thumbnail ? this.searchResult.thumbnail.source : undefined;
     })
+  }
+  startSearch () {
+    const searchTerm = this.searchBox.nativeElement.value;
+    this.http.get(this.apiUrl + searchTerm ).subscribe((res)=> {
+      console.log(res);
+  }
+  getImageUrl (page) {
+    return page.thun,nail ? page.thumbnail.source : underfined
   }
 }
