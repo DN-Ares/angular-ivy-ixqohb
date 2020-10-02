@@ -2,13 +2,15 @@
 <button (click)="startSearch()" >Search!</button>
 <div *ngIf="searchResult">
   <h2> {{ searchResult.title }}</h2>
+ <a href="searchResult"> </a>
+
  <img [src] ="searchImage" /> 
- 
  <!-- 
    <img *ngIf="searchResult.thumbnail" [src] ="searchResult.thumbnail.source" />
   
   *** kui api.comonents.ts "searchImage" jätta lisamat... e.img sisestus jätta JS poolele
   -->
+
   <p> {{ searchResult.extract }}</p>
   <p> Viimati muudetud: {{ searchResult.timestamp | date }}</p>
 </div> 

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiComponent implements OnInit {
 
-  apiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
+  apiUrl = 'https://et.wikipedia.org/api/rest_v1/page/summary/';
 searchResult:any;
 searchImage:string;
 
@@ -21,6 +21,7 @@ searchImage:string;
 
   startSearch () {
     const searchTerm = this.searchBox.nativeElement.value;
+    
 
     this.http.get(this.apiUrl + searchTerm ).subscribe((res)=> {
       console.log(res);
