@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiComponent implements OnInit {
 
   apiUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
-searchResult:any = {};
+searchResult:any;
 
   @ViewChild('search') searchBox: ElementRef<HTMLInputElement>;
 
